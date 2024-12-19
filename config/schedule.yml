@@ -1,0 +1,4 @@
+crawl_news_job:
+  cron: "*/5 * * * *"
+  class: CrawlNewsJob
+  queue: "default"

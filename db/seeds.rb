@@ -7,3 +7,10 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+Publisher.create!([
+  { slug: "says", name: "Says", language: "en", is_new: false, feed_url: "https://says.com/my/rss" },
+  { slug: "utusan-malaysia", name: "Utusan Malaysia", language: "ms", is_new: false, feed_url: "https://www.utusan.com.my/feed/" },
+  { slug: "beritanasional", name: "Berita Nasional", language: "ms", is_new: false, feed_url: "https://www.bharian.com.my/feed" }
+])
