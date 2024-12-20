@@ -39,11 +39,11 @@ class CrawlNewsJob
             description: item.description || "",
             published_at: item.pubDate || Time.now,
             publisher_id: publisher.id
-          )
-          articles_created += 1
-          log_info("Article created successfully", publisher, link: item.link)
-
-          CrawlArticleContentJob.perform_async(news_article.id)
+          ).tap do |news_article|
+            articles_created += 1
+            log_info("Article created successfully", publisher, link: news_article.link)
+            # CrawlArticleJob.perform_async(publisher.id, news_article.id)
+          end
         end
 
         log_info("Crawling completed", publisher, articles_created: articles_created)

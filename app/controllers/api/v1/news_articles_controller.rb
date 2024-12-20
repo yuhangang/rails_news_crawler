@@ -4,6 +4,10 @@ module Api
       def index
         news_articles = NewsArticle.all
 
+         if params[:lang].present?
+           news_articles = news_articles.joins(:publisher).where(publishers: { language: params[:lang] })
+         end
+
         render json: {
           status: "success",
           articles: news_articles.map do |article|
@@ -20,7 +24,8 @@ module Api
               publisher: {
                 id: publisher.id,
                 name: publisher.name,
-                language: publisher.language
+                language: publisher.language,
+                icon_url: publisher.icon_url
               }
             }
           end

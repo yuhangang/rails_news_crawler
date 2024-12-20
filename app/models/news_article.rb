@@ -1,4 +1,5 @@
 class NewsArticle < ApplicationRecord
+  belongs_to :publisher
   validates :title, presence: true
   validates :link, presence: true, uniqueness: true # Prevent duplicates
   validates :published_at, presence: true

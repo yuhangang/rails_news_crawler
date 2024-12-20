@@ -1,4 +1,5 @@
 class Publisher < ApplicationRecord
+  has_many :news_articles
   LANGUAGES = %w[en ms zh].freeze # Supported languages
 
   validates :slug, presence: true, uniqueness: true

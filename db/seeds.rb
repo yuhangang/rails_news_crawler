@@ -10,7 +10,7 @@
 
 
 Publisher.create!([
-  { slug: "says", name: "Says", language: "en", is_new: false, feed_url: "https://says.com/my/rss" },
-  { slug: "utusan-malaysia", name: "Utusan Malaysia", language: "ms", is_new: false, feed_url: "https://www.utusan.com.my/feed/" },
-  { slug: "beritanasional", name: "Berita Nasional", language: "ms", is_new: false, feed_url: "https://www.bharian.com.my/feed" }
+  { slug: "says", name: "Says", language: "en", is_new: false, feed_url: "https://says.com/my/rss", icon_url: "https://says.com/favicon.ico" },
+  { slug: "utusan-malaysia", name: "Utusan Malaysia", language: "ms", is_new: false, feed_url: "https://www.utusan.com.my/feed/", icon_url: "https://www.utusan.com.my/favicon.ico" },
+  { slug: "beritan-harian", name: "Berita Harian", language: "ms", is_new: false, feed_url: "https://www.bharian.com.my/feed", icon_url: "https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.bharian.com.my/&size=512" }
 ])
