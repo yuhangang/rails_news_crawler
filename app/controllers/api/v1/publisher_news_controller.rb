@@ -45,7 +45,6 @@ module Api
             title: article.title,
             link: article.link,
             description: article.description,
-            content: article.content,
             published_at: article.published_at,
             source: article.source,
             image_url: article.image_url
