@@ -42,7 +42,7 @@ class CrawlNewsJob
           ).tap do |news_article|
             articles_created += 1
             log_info("Article created successfully", publisher, link: news_article.link)
-            # CrawlArticleJob.perform_async(publisher.id, news_article.id)
+            CrawlArticleJob.new.perform(publisher.id, news_article.id)
           end
         end
 

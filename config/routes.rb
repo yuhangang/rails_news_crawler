@@ -16,6 +16,7 @@ Rails.application.routes.draw do
       get "publishers", to: "publishers#index", as: "publishers_index"
       get "publishers/:id", to: "publishers#show", as: "publisher_show"
       get "publishers/:slug/news", to: "publisher_news#index", as: "publisher_news_index"
+      post "crawl_news/:id", to: "crawl_news#create", as: "crawl_news_create"
     end
   end
 
