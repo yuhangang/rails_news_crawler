@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      get "news_articles", to: "news_articles#index", as: "news_articles_index"
-      get "news_articles/:id", to: "news_articles#show", as: "news_article_show"
+      get "news", to: "news_articles#index", as: "news_articles_index"
+      get "news/:id", to: "news_articles#show", as: "news_article_show"
       get "publishers", to: "publishers#index", as: "publishers_index"
       get "publishers/:id", to: "publishers#show", as: "publisher_show"
       get "publishers/:slug/news", to: "publisher_news#index", as: "publisher_news_index"

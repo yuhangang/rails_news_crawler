@@ -22,8 +22,12 @@ gem "sidekiq"
 gem "sidekiq-cron"
 gem "sinatra"
 
+# Scraping libraries
 gem "nokogiri"
 gem "httparty"
+
+# Use Kaminari for pagination
+gem "kaminari"
 
 # Use Redis adapter for Active Job
 gem "redis" # Required for Sidekiq
